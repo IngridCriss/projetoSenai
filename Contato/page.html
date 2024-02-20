@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Menu/style.css">
+    <script src="script.js"></script>
     <title>Controle de estoque</title>
 </head>
 <body>
-    <h1>menu</h1>
+    <a href="../Menu/page.html">VOLTAR</a>
+    <h1>Contato</h1>
+    <h2>Insira dados iniciais para envio</h2>
+
+    <label for="nome" class="form">Seu nome</label> <br>
+    <input type="text" id="nome" placeholder="Digite seu nome" class="label">
+
+    <br><br>
+
+    <label for="mensagem" class="form">Mensagem</label> <br>
+    <textarea id="mensagem" placeholder="Digite suas observações" class="label"></textarea>
+
+    <br><br>
+
+    <button onclick="conferirMensagemWpp()" class="button"><div class="text-button">Conferir mensagem</div></button>
+
+    <br><br>
+
+    <p class="form">Nome: <span id="confNome"></span></p>
+    <p class="form">Observações: <span id="confMsg"></span></p>
+    <p class="form">Data: <span id="confDate"></span></p>
+
+    <br><br>
+
+    <button onclick="enviarWpp()" class="button"><div class="text-button">Enviar mensagem</div></button>
+
 </body>
 </html>
