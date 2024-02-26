@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle de estoque</title>
-</head>
-<body>
-    <a href="../Menu/page.html">VOLTAR</a>
-    <h1>Tabela</h1>
-    <br><br>
-    <div>
-        <input type="text" placeholder="Nome do produto" id="nome" class="label"> <br><br>
-        <input type="text" placeholder="Valor do produto" id="valor" class="label"> <br><br>
-        <input type="text" placeholder="Quantidade" id="quantidade" class="label"> <br><br>
-    </div>
-    <div>
-        <button onclick="adicionarItem()" class="button">⭐</button>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Controle de estoque</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    </head>
+    <body>
+        <a href="../Menu/page.html"> <i class="fi fi-rr-arrow-small-left"></i> VOLTAR</a>
+        <div class="container">         
+                <h1>Tabela de produtos</h1>
+                <br><br>
+                <div class="inputs">
+                    <input type="text" placeholder="Nome do produto" id="nome"> 
+                    <input type="text" placeholder="Quantidade" id="quantidade"> 
+                    <input type="text" placeholder="Valor de entrada do produto" id="valorE" > 
+                    <input type="text" placeholder="Valor de saída do produto" id="valorS" > 
+                </div>
+                <div>
+                    <button onclick="adicionarItem()" class="button">Adicionar</button>
+                </div>
+                <br>
+                <div>
+                    <table id="tabela">
+                        <thead>
+                            <tr class="tituloTabela">
+                                <th>Nome</th>
+                                <th>Quantidade</th>
+                                <th>Valor de Entrada</th>
+                                <th>Valor de Saída</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div>
+                    <button onclick="exportarParaExcel()" class="button">Gerar Excel</button>
+                </div>
+                <div class="removerItem">
+                    <input type="text" id="nomeRemover" placeholder="Nome para Remover" class="removerItem"/>
+                    <button onclick="removerItem()"class="removerItem">❌</button>
+                </div>
+        </div>
+    </body>
 </html>

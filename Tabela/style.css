@@ -1,0 +1,79 @@
+body{
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: underline;
+    text-decoration-color: rgb(150, 55, 228);
+}
+.tituloTabela th{
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    padding: 10px;
+    gap: 30px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    gap: 15px;
+}
+.inputs input{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius:5px;
+    width:60%;
+}
+.button {
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 7px;
+    margin-top: 25px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    width: 140px
+}
+
+.button:hover {
+    background-color:rgb(215, 191, 238);
+    color: white;
+    transition: 0.2s;
+}
+
+td {
+    flex-direction: row;
+    background-color:rgb(195, 255, 255);
+    padding: 8px;
+}
+.removerItem {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    padding: 8px;
+
+}
+
+.removerItem button:hover{
+    background-color: rgb(241, 150, 150);
+    cursor: pointer;
+}
+
+
