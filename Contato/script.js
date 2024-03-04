@@ -30,7 +30,7 @@ function conferirMensagemWpp() {
 function enviarWpp() {
     var numeroTelefone = "5541999999999";
 
-    var link = "https://wa.me/" + numeroTelefone + "?text= NOME DO FÃ DA BARBIE" + nomeGlobal + " - " + mensagemGlobal + " - " + formatarData(dateGlobal);
+    var link = "https://wa.me/" + numeroTelefone + "?text= Remetente: " + nomeGlobal + " - " + mensagemGlobal + " - " + formatarData(dateGlobal);
     console.log(link);
     window.open(link, "_blank");
 }
